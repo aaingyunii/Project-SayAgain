@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "623889353292",
+    "firebase_url": "https://sayagain.firebaseio.com",
+    "project_id": "sayagain",
+    "storage_bucket": "sayagain.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623889353292:android:ff815643f2c65ffe",
+        "android_client_info": {
+          "package_name": "com.example.in_gyunahn.sayagain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623889353292-19idsete9liag5qmjecc0sg18o17atnh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.in_gyunahn.sayagain",
+            "certificate_hash": "041b44cb540f576e308ee52f886c34c6028059e0"
+          }
+        },
+        {
+          "client_id": "623889353292-0okbpmri9c8ksmk0dmeq0chlgribs70v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.in_gyunahn.sayagain",
+            "certificate_hash": "95188f79f234e05fb69a99b3863312d8d8da40d2"
+          }
+        },
+        {
+          "client_id": "623889353292-kcnelmj5v4isv86l6mtr91avqrqh3s8n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPFgiUtkObtUTnzcyPwbjnBVFABS-bzow"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623889353292-kcnelmj5v4isv86l6mtr91avqrqh3s8n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent" >
+	<!-- 옵션 버튼 -->
+	<ToggleButton 
+		android:id="@+id/btn_option"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_alignParentRight="true"
+		android:textOn="@string/text_option_on"
+		android:textOff="@string/text_option_off"/>
+	<!-- 언어 선택 스피너 -->
+	<Spinner
+		android:id="@+id/lang"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_toLeftOf="@id/btn_option"
+		android:layout_alignBottom="@id/btn_option"
+		android:spinnerMode="dropdown"
+		android:entries="@array/lang" />
+	<!-- pitch 조절 -->
+	<LinearLayout
+	    android:id="@+id/pitch"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:layout_below="@id/lang"
+		android:layout_marginTop="5dp" >
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="50dp"
+			android:text="@string/text_label_pitch" />
+		<SeekBar 
+			android:id="@+id/seek_pitch"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:max="20"
+			android:progress="10" />
+	</LinearLayout>
+	<!-- rate 조절 -->
+	<LinearLayout
+	    android:id="@+id/rate"
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center_vertical"
+		android:layout_below="@id/pitch"
+		android:layout_marginTop="5dp" >
+		<TextView 
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:minWidth="50dp"
+			android:text="@string/text_label_rate" />
+		<SeekBar 
+			android:id="@+id/seek_rate"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:max="20"
+			android:progress="10" />
+	</LinearLayout>
+
+	<!-- 사용자 입력을 출력 -->
+	<RelativeLayout
+		android:id="@+id/custom"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/rate"
+		android:layout_marginTop="10dp" 
+		android:visibility="visible" >"
+		<!-- 실행 버튼 -->
+		<Button 
+			android:id="@+id/btn_speak"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:text="@string/btn_speak"/>
+		
+		<!-- 문자 입력 창 -->
+		<EditText
+			android:id="@+id/text"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_toLeftOf="@id/btn_speak"
+			android:hint="@string/hint_input_please"
+			android:gravity="top"/>
+	</RelativeLayout>
+	
+	<!-- 샘플 텍스트를 출력 -->
+	<RelativeLayout
+		android:id="@+id/sample"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/rate"
+		android:layout_marginTop="10dp"
+		android:visibility="gone" >
+		<!-- 실행 버튼 -->
+		<Button 
+			android:id="@+id/btn_speak2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:text="@string/btn_speak"/>
+		
+		<!-- sample text -->
+		<Spinner
+			android:id="@+id/sample_text"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_toLeftOf="@id/btn_speak2"
+			android:layout_alignBottom="@id/btn_speak2"
+			android:entries="@array/sample_text"
+			android:spinnerMode="dropdown" />
+	</RelativeLayout>
+</RelativeLayout>

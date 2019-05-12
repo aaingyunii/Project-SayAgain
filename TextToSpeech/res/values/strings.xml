@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">TextToSpeech</string>
+	
+	<string name="btn_speak">speak</string>
+	
+	<string name="hint_input_please">Input Here!</string>
+	
+	<string name="msg_fail_init">Fail initialize TTS.</string>
+	<string name="msg_success_init">Please input text and click button.</string>
+	<string name="msg_select_lang">Select a language.</string>
+	<string name="msg_not_support_lang">This language does not support.</string>
+	
+	<string name="text_option_on">sample</string>
+	<string name="text_option_off">custom</string>
+	<string name="text_label_pitch">pitch</string>
+	<string name="text_label_rate">rate</string>
+</resources>

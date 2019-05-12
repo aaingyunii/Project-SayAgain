@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SayAgain_Administrator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.0.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.0.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+  </head>
+  <body>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="/__/firebase/6.0.2/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+      <!-- Initialize Firebase -->
+      <script src="/__/firebase/init.js"></script>
+
+      <nav class = "navbar">
+        <div class ="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-name">SayAgain Manager </a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid">
+        <h1>관리자 로그인</h1>
+
+        <div class="form-group">
+          <label for="email">Email address:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter Manager Email">
+        </div>
+
+        <div class="form-group">
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+        </div>
+
+        <button type="button" class="btn btn-default login">로그인</button>
+
+      </div>
+
+      <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js">
+        var emailAuth;
+        var firebaseDatabse;
+
+        var config = {
+          apiKey: "AIzaSyCuxnbTaJd5UKT2ALavzbCOHVbwQMjtvyU",
+          authDomain: "sayagain.firebaseapp.com",
+          databaseURL: "https://sayagain.firebaseio.com",
+          projectId: "sayagain",
+          storageBucket: "sayagain.appspot.com",
+          messagingSenderId: "623889353292"
+        };
+
+        firebase.initializeApp(config);
+        emailAuth = firebase.auth();
+        firebaseDatabase=firebase.database();
+
+        $(document).ready(function(){
+          $(document).on('click','.login',function(){
+
+            var email = $('#email').val();
+            var password = $('#pwd').val();
+            alert("로그인 버튼 눌렸음" + email +":"+ password);
+
+            emailAuth.signInWithEmailAndPassword(email, password).then(function(firebasUser){
+              loginSuccess(firebasUser);
+            })
+            .catch(function(error){
+              alert(error);
+              alert("로그인 실패");
+            });
+          });
+        });
+
+        function loginSuccess(firebasUser){
+          alert(firebasUser.uid)
+          alert("로그인 성공")
+          
+          firebaseDatabase.ref("users/"+firebaseUser.uid).once('value').then(function(snapshot){
+          alert(snapshot.val().name)
+        });
+
+        }
+
+
+
+
+      </script>
+
+
+      
+
+      
+     
+    
+  </body>
+</html>
