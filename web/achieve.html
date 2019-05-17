@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>사용자 학습 성취도 평가</title>
+
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.0.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.0.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+</head>
+<body>
+	<nav class = "navbar">
+        <div class ="container-fluid">
+          <div class="navbar-header">
+          	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+            <a class="navbar-brand">SayAgain Manager</a>
+          </div>
+
+        </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="/index.html">Home</a>
+                  </li>
+                  <li>
+                      <a href="/manage.html">영어 원문 관리</a>
+                  </li>
+                  <li class="active">
+                      <a href="/achieve.html">사용자 성취도</a>
+                  </li>
+
+              </ul>
+          
+          </div>
+
+      </nav>
+
+      <!-- 이부분은 데이터베이스를 미리 구성해놓은후에야 완성이 가능 -->
+      <!-- 사용자와 각 사용자의 데이터를 불러와서 확인하는 페이지 -->
+      <!-- 어떤식으로 페이지를 만들어야하는지 시간이 좀더 필요한 부분 -->
+</body>
+</html>

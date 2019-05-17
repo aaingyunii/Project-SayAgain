@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>영어 원문 관리</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="manage-style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/6.0.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/6.0.1/firebase-auth.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/6.0.1/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+</head>
+
+<body>
+	<nav class = "navbar">
+        <div class ="container-fluid">
+          <div class="navbar-header">
+          	  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+            <a class="navbar-brand">SayAgain Manager</a>
+          </div>
+
+        </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li>
+                      <a href="/index.html">Home</a>
+                  </li>
+                  <li class="active">
+                      <a href="/manage.html">영어 원문 관리</a>
+                  </li>
+                  <li>
+                      <a href="/achieve.html">사용자 성취도</a>
+                  </li>
+
+              </ul>
+          
+          </div>
+
+      </nav>
+
+     <div id="first">
+      <h2>원문 입력</h2> 
+     	<div class="form-group">
+     		<label for="st-id">학습 번호:(컨텐츠ID)</label>
+          	<input type="text" class="form-control" id="st-id">
+
+          	<label for="grade">학습 수준</label>
+          	<input type="text" class="form-control" id="grade">
+
+          	<label for="subject">학습 주제</label>
+          	<input type="text" class="form-control" id="subject">
+
+          	<label for="upload">파일 등록</label>
+          	<input type="button" onclick="alert('등록 완료!')" value="등록" id="upload"><br>
+
+          	<label for="content">내용:</label><br>
+          	<textarea id="contents" placeholder="내용을 입력하세요" cols="70" rows="5"></textarea>
+
+     	</div>
+     
+
+     	<!-- <form action="/submit/" method="get">
+  			<input name="username" type="text" placeholder="이름" />
+  			<textarea name="content" placeholder="내용을 입력하세요."></textarea>
+ 			
+ 			<button>제출하기</button>
+		</form> -->
+	</div>
+	<div id="second">
+      <h2>핵심 단어 및 예문 정보</h2>
+      <div class="form-group">
+      	<input type="text" placeholder="검색어 입력" class="form-control" id="searchbar">
+      	<button id="search" onclick="alert('검색!')">검색</button>
+
+      	<!-- 테이블은 검색한 단어를 테이블에 등록시켜 보여주는 역할 -->
+      	<!-- 수정할거 - 검색한 단어를 추가할수록 테이블의 행이 자동으로 추가되는.. -->
+      	<table border="1" width="500" align="center">
+      		<tr height="50" background-color = "#3300FF" text-align = "center">
+      			<th>순서</th>
+      			<th>내용</th>
+      			<th>뜻</th>
+      		</tr>
+      		<tr height="50">
+      			<td>1</td>
+      			<td>None</td>
+      			<td>None</td>
+      		</tr>
+      		<tr height="50">
+      			<td>2</td>
+      			<td>None</td>
+      			<td>None</td>
+      		</tr>
+      		<tr height="50">
+      			<td>3</td>
+      			<td>None</td>
+      			<td>None</td>
+      		</tr>
+      	</table>
+      	<br><br>
+
+      	<label for="word" >단어 / 예문</label><br>
+      	<input type="text" id="word" class="form-control" readonly="true"><br>
+
+      	<label for="meaning">뜻</label><br>
+      	<input type="text" id="meaning" class="form-control" readonly="true">
+      	<br>
+
+      	<button>사전등록</button>
+      </div>
+     </div>
+
+
+ 
+</body>
+</html>
