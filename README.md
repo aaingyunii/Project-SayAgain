@@ -5,7 +5,7 @@
 
 
 
-## 앱의 개발상황
+## 앱의 개발상황 - 프로토타입으로 완벽한 모습을 보이지 않음.
 
 ![KakaoTalk_20190524_183603406](https://user-images.githubusercontent.com/31847834/58318647-28003b80-7e53-11e9-8cbe-fad1874c06e0.jpg)
 1. 첫화면
