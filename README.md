@@ -19,3 +19,6 @@ kaldi의 tool 킷을 이용해 OpenBLAS 열어 환경 유지,  NVIDIA CUDA 설�
 ![image](https://user-images.githubusercontent.com/31847834/58753412-c185b800-84f9-11e9-99af-76515cae543a.png)
 
 최종적으로, kaldi 프로젝트를 Visual Studio로 빌드할 수 있는 환경을 만들었음.
+
+http://jcsilva.github.io/2017/03/18/compile-kaldi-android/ -> 안드로이드 환경에서 사용할 수 있는 방법이 적혀있음
+
